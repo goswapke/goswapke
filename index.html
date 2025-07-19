@@ -70,5 +70,17 @@
   <footer>
     <p>© 2025 GoSwap Travel Solutions</p>
   </footer>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header.hero');
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
 </body>
 </html>
