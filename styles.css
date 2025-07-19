@@ -227,3 +227,21 @@ header.hero.scrolled {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+
+/* Footer Social Icons */
+.social-footer {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
