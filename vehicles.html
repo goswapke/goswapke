@@ -1,39 +1,428 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Available Vehicles - GoSwap</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Available Vehicles - GoSwap</title>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <header class="hero" style="background-image: url('https://source.unsplash.com/1600x400/?car,road');">
-    <div class="hero-text">
-      <h1>Available Vehicles</h1>
-      <p>Find the perfect ride for your journey</p>
-    </div>
-  </header>
-
-  <section class="how-it-works">
-    <h2>Our Fleet</h2>
-    <p>Select from our wide range of vehicles suited for every occasion, from city drives to safari adventures.</p>
-    <!-- Vehicle list would go here -->
-  </section>
-
-  <footer>
-    <p>© 2025 GoSwap Travel Solutions</p>
-  
-<div class="social-footer">
-  <a href="https://www.facebook.com/goswap" target="_blank">
-    <img src="assets/facebook-icon.png" alt="" class="social-icon">
-  </a>
-  <a href="https://www.instagram.com/goswap" target="_blank">
-    <img src="assets/instagram-icon.png" alt="" class="social-icon">
-  </a>
+<header class="hero" style="background-image: url('https://source.unsplash.com/1600x400/?car,road');">
+<div class="hero-text">
+<h1>Available Vehicles</h1>
+<p>Find the perfect ride for your journey</p>
 </div>
-
+</header>
+<section class="how-it-works">
+<h2>Our Fleet</h2>
+<p>Select from our wide range of vehicles suited for every occasion, from city drives to safari adventures.</p>
+<div class="vehicle-grid">
+<div class="vehicle-card">
+<h3>Toyota RAV4 </h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 13000</li>
+<li><strong>Self Drive:</strong> KES 8000</li>
+<li><strong>Engine:</strong> 2400cc</li>
+<li><strong>Fuel:</strong> Petrol</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Mazda Demio, Toyota Vitz, Nissan Note</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 9000</li>
+<li><strong>Self Drive:</strong> KES 4000</li>
+<li><strong>Engine:</strong> 1300cc</li>
+<li><strong>Fuel:</strong> Petrol/Diesel</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota Axio, Corolla, </h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 9500</li>
+<li><strong>Self Drive:</strong> KES 4500</li>
+<li><strong>Engine:</strong> 1500cc</li>
+<li><strong>Fuel:</strong> Petrol/Hybrid</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota Fielder</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 9500</li>
+<li><strong>Self Drive:</strong> KES 4500</li>
+<li><strong>Engine:</strong> 1500cc</li>
+<li><strong>Fuel:</strong> Petrol/Hybrid</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Mazda CX-5</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 12500</li>
+<li><strong>Self Drive:</strong> KES 7500</li>
+<li><strong>Engine:</strong> 2200cc</li>
+<li><strong>Fuel:</strong> Petrol/Diesel</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Nissan Xtrail</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 12500</li>
+<li><strong>Self Drive:</strong> KES 7500</li>
+<li><strong>Engine:</strong> 2000cc</li>
+<li><strong>Fuel:</strong> Petrol</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota Voxy, Noah</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 13000</li>
+<li><strong>Self Drive:</strong> KES 8000</li>
+<li><strong>Engine:</strong> 2000cc</li>
+<li><strong>Fuel:</strong> Petrol</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 7</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota Harrier</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 13500</li>
+<li><strong>Self Drive:</strong> KES 8500</li>
+<li><strong>Engine:</strong> 2000cc</li>
+<li><strong>Fuel:</strong> Petrol</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota Prado</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 18000</li>
+<li><strong>Self Drive:</strong> KES 13000</li>
+<li><strong>Engine:</strong> 2700cc</li>
+<li><strong>Fuel:</strong> Petrol/Diesel</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota Alphard, Vellfire</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 18000</li>
+<li><strong>Self Drive:</strong> KES 13000</li>
+<li><strong>Engine:</strong> 2500cc</li>
+<li><strong>Fuel:</strong> Petrol</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 7</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota  V8</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 31000</li>
+<li><strong>Self Drive:</strong> KES 26000</li>
+<li><strong>Engine:</strong> 3500cc</li>
+<li><strong>Fuel:</strong> Petrol</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 7</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota Coaster</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 25000</li>
+<li><strong>Self Drive:</strong> KES 20000</li>
+<li><strong>Engine:</strong> 4000cc</li>
+<li><strong>Fuel:</strong> Diesel/Petrol</li>
+<li><strong>Transmission:</strong> Manual/ Ato</li>
+<li><strong>Seats:</strong> 14</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Mercedes E250</h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 30000</li>
+<li><strong>Self Drive:</strong> KES 25000</li>
+<li><strong>Engine:</strong> 2500cc</li>
+<li><strong>Fuel:</strong> Petrol</li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+<div class="vehicle-card">
+<h3>Toyota Hilux </h3>
+<ul>
+<li><strong>Chauffeured:</strong> KES 15000</li>
+<li><strong>Self Drive:</strong> KES 10000</li>
+<li><strong>Engine:</strong> 2400cc</li>
+<li><strong>Fuel:</strong> Diesel </li>
+<li><strong>Transmission:</strong> Automatic</li>
+<li><strong>Seats:</strong> 5</li>
+</ul>
+<button class="btn toggle-booking">Book Now</button>
+<div class="booking-form" style="display:none;">
+<form>
+<label>Full Name:</label><input required="" type="text"/><br/>
+<label>Phone Number:</label><input required="" type="tel"/><br/>
+<label>Email:</label><input required="" type="email"/><br/>
+<label>Pickup Location:</label><input required="" type="text"/><br/>
+<label>Pickup Date:</label><input required="" type="date"/><br/>
+<label>Return Date:</label><input required="" type="date"/><br/>
+<label>Drive Option:</label>
+<select>
+<option value="self">Self Drive</option>
+<option value="chauffeured">Chauffeured</option>
+</select><br/>
+<button class="btn" type="submit">Proceed to Checkout</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<p>© 2025 GoSwap Travel Solutions</p>
+<div class="social-footer">
+<a href="https://www.facebook.com/goswap" target="_blank">
+<img alt="" class="social-icon" src="assets/facebook-icon.png"/>
+</a>
+<a href="https://www.instagram.com/goswap" target="_blank">
+<img alt="" class="social-icon" src="assets/instagram-icon.png"/>
+</a>
+</div>
 </footer>
-
 <script>
 document.getElementById("vehicleSearch").addEventListener("keyup", function() {
   const query = this.value.toLowerCase();
@@ -44,8 +433,6 @@ document.getElementById("vehicleSearch").addEventListener("keyup", function() {
   });
 });
 </script>
-
-
 <script>
 document.getElementById("engineFilter").addEventListener("change", function() {
   const selected = this.value.toLowerCase();
@@ -57,8 +444,6 @@ document.getElementById("engineFilter").addEventListener("change", function() {
   });
 });
 </script>
-
-
 <script>
 function applyFilters() {
   const engine = document.getElementById("engineFilter").value.toLowerCase();
@@ -79,6 +464,12 @@ document.getElementById("engineFilter").addEventListener("change", applyFilters)
 document.getElementById("transmissionFilter").addEventListener("change", applyFilters);
 document.getElementById("fuelFilter").addEventListener("change", applyFilters);
 </script>
-
-</body>
+<script>
+document.querySelectorAll(".toggle-booking").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const form = btn.nextElementSibling;
+    form.style.display = form.style.display === "none" ? "block" : "none";
+  });
+});
+</script></body>
 </html>
