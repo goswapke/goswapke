@@ -1,9 +1,8 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-  background: #e6f2ef;
+  background: #f9f9f9;
 }
 
 .hero {
@@ -33,7 +32,7 @@ body {
 .how-it-works, .testimonials, .cta {
   padding: 40px 20px;
   text-align: center;
-  background: #e6f2ef;
+  background: white;
   margin-bottom: 20px;
 }
 
@@ -59,4 +58,14 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 10px;
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+.logo {
+  height: 70px;
 }
