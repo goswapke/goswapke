@@ -23,5 +23,52 @@
   <footer>
     <p>© 2025 GoSwap Travel Solutions</p>
   </footer>
+
+<script>
+document.getElementById("vehicleSearch").addEventListener("keyup", function() {
+  const query = this.value.toLowerCase();
+  const cards = document.querySelectorAll(".vehicle-card");
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(query) ? "block" : "none";
+  });
+});
+</script>
+
+
+<script>
+document.getElementById("engineFilter").addEventListener("change", function() {
+  const selected = this.value.toLowerCase();
+  const cards = document.querySelectorAll(".vehicle-card");
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    const matches = selected === "" || text.includes(selected);
+    card.style.display = matches ? "block" : "none";
+  });
+});
+</script>
+
+
+<script>
+function applyFilters() {
+  const engine = document.getElementById("engineFilter").value.toLowerCase();
+  const transmission = document.getElementById("transmissionFilter").value.toLowerCase();
+  const fuel = document.getElementById("fuelFilter").value.toLowerCase();
+  const cards = document.querySelectorAll(".vehicle-card");
+
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    const matchesEngine = !engine || text.includes(engine);
+    const matchesTransmission = !transmission || text.includes(transmission);
+    const matchesFuel = !fuel || text.includes(fuel);
+    card.style.display = (matchesEngine && matchesTransmission && matchesFuel) ? "block" : "none";
+  });
+}
+
+document.getElementById("engineFilter").addEventListener("change", applyFilters);
+document.getElementById("transmissionFilter").addEventListener("change", applyFilters);
+document.getElementById("fuelFilter").addEventListener("change", applyFilters);
+</script>
+
 </body>
 </html>
