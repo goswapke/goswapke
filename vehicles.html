@@ -30,19 +30,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota RAV4 "/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -58,19 +82,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Mazda Demio, Toyota Vitz, Nissan Note"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -86,19 +134,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota Axio, Corolla, "/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -114,19 +186,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota Fielder"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -142,19 +238,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Mazda CX-5"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -170,19 +290,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Nissan Xtrail"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -198,19 +342,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota Voxy, Noah"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -226,19 +394,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota Harrier"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -254,19 +446,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota Prado"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -282,19 +498,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota Alphard, Vellfire"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -310,19 +550,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota  V8"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -338,19 +602,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota Coaster"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -366,19 +654,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Mercedes E250"/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -394,19 +706,43 @@
 </ul>
 <button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form>
-<label>Full Name:</label><input required="" type="text"/><br/>
-<label>Phone Number:</label><input required="" type="tel"/><br/>
-<label>Email:</label><input required="" type="email"/><br/>
-<label>Pickup Location:</label><input required="" type="text"/><br/>
-<label>Pickup Date:</label><input required="" type="date"/><br/>
-<label>Return Date:</label><input required="" type="date"/><br/>
-<label>Drive Option:</label>
-<select>
-<option value="self">Self Drive</option>
-<option value="chauffeured">Chauffeured</option>
-</select><br/>
-<button class="btn" type="submit">Proceed to Checkout</button>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
+<label>Return Date:<input required="" type="date"/></label><br/>
+<label>Swap or Lease:
+          <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
+<option value="">-- Select --</option>
+<option value="lease">Lease</option>
+<option value="swap">Swap</option>
+</select>
+</label><br/>
+<div class="lease-fields">
+<label>Would you like a Chauffeur?
+            <select required="">
+<option value="">-- Select --</option>
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+</label><br/>
+</div>
+<div class="swap-fields" style="display:none;">
+<label>Your Vehicle Make/Model:<input type="text"/></label><br/>
+<label>Registration Number:<input type="text"/></label><br/>
+<label>Upload Logbook:<input type="file"/></label><br/>
+<label>Upload Insurance:<input type="file"/></label><br/>
+<label>Upload ID:<input type="file"/></label><br/>
+<p><strong>Note:</strong> Swap incurs a one-time facilitation fee of <strong>KES 2,500</strong>.</p>
+</div>
+<label>Vehicle:<input readonly="" type="text" value="Toyota Hilux "/></label><br/>
+<label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
 </form>
 </div>
 </div>
@@ -471,5 +807,22 @@ document.querySelectorAll(".toggle-booking").forEach(btn => {
     form.style.display = form.style.display === "none" ? "block" : "none";
   });
 });
+
+function handleSwapLeaseToggle(selectEl) {
+  const form = selectEl.closest("form");
+  const leaseFields = form.querySelector(".lease-fields");
+  const swapFields = form.querySelector(".swap-fields");
+
+  if (selectEl.value === "swap") {
+    leaseFields.style.display = "none";
+    swapFields.style.display = "block";
+  } else if (selectEl.value === "lease") {
+    leaseFields.style.display = "block";
+    swapFields.style.display = "none";
+  } else {
+    leaseFields.style.display = "none";
+    swapFields.style.display = "none";
+  }
+}
 </script></body>
 </html>
