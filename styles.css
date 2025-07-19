@@ -1,108 +1,75 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
 }
-
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    background-color: #003366;
-    color: white;
+  background-color: #004aad;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
 }
-
 .logo {
-    height: 40px;
+  height: 50px;
 }
-
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
 nav a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
-
 .hero {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #e6f0ff;
+  background: #004aad;
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
 }
-
 .hero h1 {
-    font-size: 2.5rem;
-    color: #003366;
+  font-size: 48px;
+  margin: 0;
 }
-
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #003366;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.vehicle-listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
-
+.vehicle {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 10px;
+}
+.vehicle img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.vehicle h3 {
+  margin: 10px 0 5px;
+}
+.btn {
+  display: inline-block;
+  background: #004aad;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #003366;
-    color: white;
-}
-
-.vehicle-listings {
-    padding: 40px 20px;
-}
-
-.vehicle-listings h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.vehicle-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px auto;
-    width: 90%;
-    max-width: 350px;
-    background: white;
-}
-
-.vehicle-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.vehicle-card h3 {
-    margin: 10px 0 5px;
-}
-
-.vehicle-card p {
-    margin: 3px 0;
-}
-
-.vehicle-card .price {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.book-btn {
-    display: inline-block;
-    margin-top: 10px;
-    background-color: #003366;
-    color: white;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.contact {
-    padding: 40px 20px;
-    text-align: center;
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
