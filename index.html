@@ -27,7 +27,7 @@
 <div class="hero-text">
 <h1>Explore Kenya on Your Terms</h1>
 <p>Book a vehicle easily. Drive wherever your journey takes you.</p>
-<a class="btn" href="vehicles.html" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px; text-decoration: none;">Browse Vehicles</a>
+<a class="btn" href="vehicles.html" style="; background-color: #154734; color: white; border-radius: 6px; padding: 10px 18px; text-decoration: none;">Browse Vehicles</a>
 </div>
 </header>
 <section class="how-it-works">
@@ -69,7 +69,7 @@
 <section class="cta">
 <h2>Ready to Go?</h2>
 <p>Book your ride now and hit the road worry-free.</p>
-<a class="btn" href="https://pay.pesapal.com/goswap" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px; text-decoration: none;">Book Now</a>
+<a class="btn" href="https://pay.pesapal.com/goswap" style="; background-color: #154734; color: white; border-radius: 6px; padding: 10px 18px; text-decoration: none;">Book Now</a>
 </section>
 <footer>
 <p>© 2025 GoSwap Travel Solutions</p>
@@ -92,7 +92,7 @@
     }
   });
 </script>
-<button id="backToTop" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" title="Back to top">↑</button>
+<button id="backToTop" style="; background-color: #154734; color: white; border-radius: 6px; padding: 10px 18px;" title="Back to top">↑</button>
 <script>
   const backToTopBtn = document.getElementById("backToTop");
   window.addEventListener("scroll", () => {
@@ -106,5 +106,29 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+
+<!-- Scroll to Top Button -->
+<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+<script>
+// Get the button
+let mybutton = document.getElementById("scrollTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top
+function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
 </body>
 </html>
