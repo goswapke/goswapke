@@ -245,3 +245,14 @@ header.hero.scrolled {
 .social-icon:hover {
   transform: scale(1.2);
 }
+
+.btn, .header-btn {
+    background-color: #154734 !important;
+    color: white !important;
+    border: none;
+}
+
+.btn:hover, .header-btn:hover {
+    background-color: #0f3326 !important;
+    color: white !important;
+}
