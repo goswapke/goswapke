@@ -28,31 +28,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -80,8 +66,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota RAV4 "/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -94,31 +80,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -146,8 +118,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Mazda Demio, Toyota Vitz, Nissan Note"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -160,31 +132,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -212,8 +170,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota Axio, Corolla, "/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -226,31 +184,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -278,8 +222,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota Fielder"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -292,31 +236,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -344,8 +274,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Mazda CX-5"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -358,31 +288,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -410,8 +326,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Nissan Xtrail"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -424,31 +340,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 7</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -476,8 +378,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota Voxy, Noah"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -490,31 +392,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -542,8 +430,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota Harrier"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -556,31 +444,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -608,8 +482,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota Prado"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -622,31 +496,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 7</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -674,8 +534,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota Alphard, Vellfire"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -688,31 +548,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 7</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -740,8 +586,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota  V8"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -754,31 +600,17 @@
 <li><strong>Transmission:</strong> Manual/ Ato</li>
 <li><strong>Seats:</strong> 14</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -806,8 +638,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota Coaster"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -820,31 +652,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -872,8 +690,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Mercedes E250"/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 <div class="vehicle-card">
@@ -886,31 +704,17 @@
 <li><strong>Transmission:</strong> Automatic</li>
 <li><strong>Seats:</strong> 5</li>
 </ul>
-<button class="btn toggle-booking" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;">Book Now</button>
+<button class="btn toggle-booking">Book Now</button>
 <div class="booking-form" style="display:none;">
-<form enctype="multipart/form-data" onsubmit="event.preventDefault(); handleBookingSubmit(this)">
-<label for="name">Full Name:</label><input name="name" required=""/><br/>
-<label for="email">Email:</label><input name="email"/><br/>
-<label for="phone">Phone Number:</label><input name="phone" required=""/><br/>
-<label for="pickupDate">Pickup Date:</label><input name="pickupDate" required="" type="date"/><br/>
-<label for="returnDate">Return Date:</label><input name="returnDate" required="" type="date"/><br/>
-<label for="pickupLocation">Pickup Location:</label><input name="pickupLocation" required=""/><br/>
-<label for="bookingType">Booking Type:</label>
-<select name="bookingType" required="">
-<option value="">-- Select --</option>
-<option value="lease">Lease</option>
-<option value="swap">Swap</option>
-</select><br/>
-<input name="vehicle" type="hidden" value="GoSwap Vehicle"/><br/>
-<button style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit</button>
-<label>Full Name:<input required="" type="text"/></label><br>
-<label>Phone Number:<input required="" type="tel"/></label><br>
-<label>Email Address:<input required="" type="email"/></label><br>
-<label>Travel Destination:<input required="" type="text"/></label><br>
-<label>Town of Departure:<input required="" type="text"/></label><br>
-<label>Pickup Location:<input required="" type="text"/></label><br>
-<label>Pickup Date:<input required="" type="date"/></label><br>
-<label>Pickup Time:<input required="" type="time"/></label><br>
+<form enctype="multipart/form-data">
+<label>Full Name:<input required="" type="text"/></label><br/>
+<label>Phone Number:<input required="" type="tel"/></label><br/>
+<label>Email Address:<input required="" type="email"/></label><br/>
+<label>Travel Destination:<input required="" type="text"/></label><br/>
+<label>Town of Departure:<input required="" type="text"/></label><br/>
+<label>Pickup Location:<input required="" type="text"/></label><br/>
+<label>Pickup Date:<input required="" type="date"/></label><br/>
+<label>Pickup Time:<input required="" type="time"/></label><br/>
 <label>Return Date:<input required="" type="date"/></label><br/>
 <label>Swap or Lease:
           <select name="swapLeaseSelect" onchange="handleSwapLeaseToggle(this)" required="">
@@ -938,8 +742,8 @@
 </div>
 <label>Vehicle:<input readonly="" type="text" value="Toyota Hilux "/></label><br/>
 <label>Special Requests or Notes:<br/><textarea rows="3"></textarea></label><br/>
-<button class="btn" style="; background-color: #1A3C6E; color: white; border-radius: 6px; padding: 10px 18px;" type="submit">Submit &amp; Continue to Checkout</button>
-</br></br></br></br></br></br></br></br></form>
+<button class="btn" type="submit">Submit &amp; Continue to Checkout</button>
+</form>
 </div>
 </div>
 </div>
@@ -1020,40 +824,5 @@ function handleSwapLeaseToggle(selectEl) {
     swapFields.style.display = "none";
   }
 }
-</script>
-<script>
-function handleBookingSubmit(form) {
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-
-  const bookingType = data.bookingType?.toLowerCase();
-  if (!bookingType || (bookingType !== "lease" && bookingType !== "swap")) {
-    alert("Please select Lease or Swap");
-    return;
-  }
-
-  const endpoint = bookingType === "swap"
-    ? "https://us-central1-goswap-booking.cloudfunctions.net/swapCheckout"
-    : "https://us-central1-goswap-booking.cloudfunctions.net/leaseCheckout";
-
-  fetch(endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
-  })
-  .then(res => res.json())
-  .then(res => {
-    if (res.redirect) {
-      window.location.href = res.redirect;
-    } else {
-      alert("Submitted successfully. Please proceed to payment.");
-    }
-  })
-  .catch(err => {
-    console.error(err);
-    alert("Submission failed.");
-  });
-}
-</script>
-</body>
+</script></body>
 </html>
