@@ -1,134 +1,36 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GoSwap - Drive Your Way</title>
-<link href="styles.css" rel="stylesheet"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>GoSwap</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="logo-container">
-<img alt="GoSwap Logo" class="logo" src="images/goswap_logo.png"/>
-</div>
-<header class="hero">
-<div class="header-bar">
-<div class="logo-container">
-<img alt="GoSwap Logo" class="logo" src="images/goswap_logo.png"/>
-</div>
-<div class="header-buttons">
-<a class="header-btn" href="index.html">Home</a>
-<a class="header-btn" href="vehicles.html">Vehicle List</a>
-<a class="header-btn" href="contact.html">Contact Us</a>
-<a class="header-btn" href="about.html">About Us</a>
-<a class="header-btn" href="faq.html">FAQ</a>
-</div>
-</div>
-<div class="hero-text">
-<h1>Explore Kenya on Your Terms</h1>
-<p>Book a vehicle easily. Drive wherever your journey takes you.</p>
-<a class="btn" href="vehicles.html" style="; background-color: #154734; color: white; border-radius: 6px; padding: 10px 18px; text-decoration: none;">Browse Vehicles</a>
-</div>
-</header>
-<section class="how-it-works">
-<h2>How It Works</h2>
-<div class="steps">
-<div class="step">
-<img src="https://img.icons8.com/ios-filled/50/search--v1.png">
-<h3>Choose a Vehicle</h3>
-<p>Browse a variety of cars for any trip or budget.</p>
-</img></div>
-<div class="step">
-<img src="https://img.icons8.com/ios-filled/50/checkmark--v1.png">
-<h3>Book Instantly</h3>
-<p>Pay securely online with Pesapal or M-Pesa.</p>
-</img></div>
-<div class="step">
-<img src="https://img.icons8.com/ios-filled/50/car--v1.png"/>
-<h3>Drive Off</h3>
-<p>Pick up your car and enjoy total freedom.</p>
-</div>
-</div>
+    <header style="display: flex; align-items: center; padding: 10px;">
+        <a href="index.html">
+            <img src="images/logo.png" alt="GoSwap Logo" style="height: 50px;">
+        </a>
+    </header>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<h1>Welcome to GoSwap</h1>
+<section class="car-image">
+  <h2>Popular Vehicle Options</h2>
+  <img src="images/cars.png" alt="Car Types" width="100%">
+  <br><br>
+  <a class="book-button" href="https://docs.google.com/forms/d/e/1FAIpQLScFiZ05yCuvrXGISMijxr9VnJxmN6nEHMg0Ohdze5ExpxMwTw/viewform?usp=header" target="_blank">Book a Car</a>
 </section>
-<section class="testimonials">
-<h2>What Our Travelers Say</h2>
-<blockquote>
-      “GoSwap made my Nairobi business trip a breeze. Picked the car, paid online, drove off in 10 minutes.”
-      <footer>— David, Business Traveler
-<div class="social-footer">
-<a href="https://www.facebook.com/goswap" target="_blank">
-<img alt="" class="social-icon" src="assets/fb.png"/>
-</a>
-<a href="https://www.instagram.com/goswap" target="_blank">
-<img alt="" class="social-icon" src="assets/insta.png"/>
-</a>
-</div>
+
+<footer class="footer">
+  <p>&copy; 2025 GoSwap. All rights reserved.</p>
+  <p>WhatsApp us: <a href="https://wa.me/254715740270" target="_blank">+254715740270</a></p>
+  <p><small>This site is governed by Kenyan law. Vehicle use is subject to partner terms.</small></p>
 </footer>
-</blockquote>
-</section>
-<section class="cta">
-<h2>Ready to Go?</h2>
-<p>Book your ride now and hit the road worry-free.</p>
-<a class="btn" href="https://pay.pesapal.com/goswap" style="; background-color: #154734; color: white; border-radius: 6px; padding: 10px 18px; text-decoration: none;">Book Now</a>
-</section>
-<footer>
-<p>© 2025 GoSwap Travel Solutions</p>
-<div class="social-footer">
-<a href="https://www.facebook.com/goswap" target="_blank">
-<img alt="" class="social-icon" src="assets/fb.png"/>
-</a>
-<a href="https://www.instagram.com/goswap" target="_blank">
-<img alt="" class="social-icon" src="assets/insta.png"/>
-</a>
-</div>
-</footer>
-<script>
-  window.addEventListener('scroll', function() {
-    const header = document.querySelector('header.hero');
-    if (window.scrollY > 10) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-</script>
-<button id="backToTop" style="; background-color: #154734; color: white; border-radius: 6px; padding: 10px 18px;" title="Back to top">↑</button>
-<script>
-  const backToTopBtn = document.getElementById("backToTop");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      backToTopBtn.style.display = "block";
-    } else {
-      backToTopBtn.style.display = "none";
-    }
-  });
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
-
-<!-- Scroll to Top Button -->
-<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
-<script>
-// Get the button
-let mybutton = document.getElementById("scrollTopBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top
-function topFunction() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
 
 </body>
 </html>
