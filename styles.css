@@ -23,7 +23,7 @@ body {
 .btn {
   background-color: #154734;
   display: inline-block;
-  background: #1A3C6E;
+  background: #808080;
   color: white;
   padding: 10px 20px;
   margin-top: 20px;
@@ -288,13 +288,13 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #0055ff;
+    color: #808080;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-    background: #004080;
+    background: #808080;
     color: white;
     padding: 6rem 2rem;
     text-align: center;
@@ -329,7 +329,7 @@ nav ul li a:hover {
 /* Buttons */
 button, .btn {
   background-color: #154734;
-    background-color: #004080;
+    background-color: #808080;
     color: white;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -340,7 +340,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background-color: #0055ff;
+    background-color: #808080;
 }
 
 /* Forms */
