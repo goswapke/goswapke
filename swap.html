@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>GoSwap — Travel fast. Drive local.</title>
+  <title>GoSwap — Swap Vehicles</title>
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,17 +43,6 @@
     .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;padding:28px 0}
   </style>
 
-  <style>
-    .hero:before{content:"";position:absolute;inset:-10% -40% auto -40%;height:120%;
-      background:radial-gradient(60% 60% at 50% 0%,rgba(125,249,255,.18),transparent 60%),
-                 radial-gradient(80% 60% at 20% 20%,rgba(75,124,255,.25),transparent 60%)}
-    .hero h1{font-size:clamp(28px,5vw,52px);line-height:1.05;margin:0 0 14px}
-    .hero p{color:var(--muted);max-width:720px;font-size:clamp(16px,2.4vw,18px);margin:0 0 26px}
-    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
-    .trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:34px 0 6px}
-    .pill{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:999px;padding:10px 14px;color:#cdd4f3;font-weight:600;text-align:center}
-    @media (max-width:720px){.trust{grid-template-columns:repeat(2,minmax(0,1fr))}}
-  </style>
 </head>
 <body>
   
@@ -70,21 +59,24 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Travel fast. <span style="-webkit-background-clip:text;background-clip:text;color:transparent;background:linear-gradient(135deg,var(--brand),var(--brand-2))">Drive local.</span></h1>
-      <p>Skip the long, risky drives. Fly or take SGR, then pick up a verified vehicle at your destination — or swap your car with a trusted traveler.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="lease.html">🚗 Lease at my destination</a>
-        <a class="btn btn-ghost" href="swap.html">🔁 Swap my vehicle</a>
-      </div>
-      <div class="trust">
-        <div class="pill">✔️ Verified IDs</div>
-        <div class="pill">🛠️ Logbook & photo checks</div>
-        <div class="pill">🛬 Airport / SGR delivery</div>
-        <div class="pill">💳 Payments (coming soon)</div>
-      </div>
+  <div class="container hero">
+    <h1>Swap Vehicles</h1>
+    <p class="lead">Find compatible vehicles and connect securely with verified travelers. (Facilitation fee KES 500 per party when a match is made.)</p>
+  </div>
+  <section class="container" style="padding:24px 0 70px">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+      <label><span class="muted" style="display:block;font-size:12px">Location</span>
+        <select id="locationFilter" onchange="applyFilters()">
+          <option value="all">All</option><option value="Nairobi">Nairobi</option><option value="Mombasa">Mombasa</option><option value="Kisumu">Kisumu</option>
+        </select>
+      </label>
+      <label><span class="muted" style="display:block;font-size:12px">Type</span>
+        <select id="typeFilter" onchange="applyFilters()">
+          <option value="all">All</option><option value="SUV">SUV</option><option value="Sedan">Sedan</option><option value="Hatchback">Hatchback</option>
+        </select>
+      </label>
     </div>
+    <div id="grid" class="grid"></div>
   </section>
   
   <footer>
@@ -100,5 +92,56 @@
     </div>
   </footer>
 
+  <script>
+    const vehicles = [
+      { name:'Subaru Forester 2014', city:'Kisumu', type:'SUV', preference:'Looking to swap with Nairobi SUV', img:'https://images.unsplash.com/photo-1523986371872-9d3ba2e2b1b9?q=80&w=1200&auto=format&fit=crop' },
+      { name:'Toyota Premio 2012', city:'Nairobi', type:'Sedan', preference:'Prefer Mombasa sedan or hatchback', img:'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop' },
+      { name:'Mazda Demio 2015', city:'Nairobi', type:'Hatchback', preference:'Open to Mombasa or Kisumu city car', img:'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop' },
+      { name:'Toyota RAV4 2010', city:'Mombasa', type:'SUV', preference:'Swap with Nairobi/Kisumu SUV for 3–5 days', img:'https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1200&auto=format&fit=crop' }
+    ];
+    function render(list){
+      const grid=document.getElementById('grid');
+      if(!list.length){
+        grid.innerHTML='<div class="muted" style="background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.16);padding:20px;border-radius:12px;text-align:center">No vehicles match your filters. Try adjusting location or type.</div>';
+        return;
+      }
+      grid.innerHTML=list.map(c=>`
+        <div class="card">
+          <img src="${c.img}" alt="${c.name}">
+          <div class="content">
+            <span class="badge">${c.city} • ${c.type}</span>
+            <h3>${c.name}</h3>
+            <p class="muted">${c.preference}</p>
+            <div style="margin-top:12px">
+              <a class="btn btn-primary" href="#" onclick="openMatch('${c.name}','${c.city}')">I Have a Match</a>
+            </div>
+          </div>
+        </div>`).join('');
+    }
+    function applyFilters(){
+      const loc=document.getElementById('locationFilter').value;
+      const typ=document.getElementById('typeFilter').value;
+      const filtered=vehicles.filter(v=> (loc==='all'||v.city===loc) && (typ==='all'||v.type===typ));
+      render(filtered);
+    }
+    function openMatch(name='',city=''){
+      const overlay=document.createElement('div'); overlay.className='overlay';
+      overlay.innerHTML=`
+        <div class="modal">
+          <button class="close" onclick="this.parentElement.parentElement.remove()">×</button>
+          <h3>Submit your vehicle to match</h3>
+          <p class="muted" style="margin-top:-6px">Target: <strong>${name||'Any listed vehicle'}</strong> ${city?('• '+city):''}</p>
+          <form onsubmit="event.preventDefault();this.outerHTML='<p style=\'color:#a9f1b0\'>Thanks! We\'ll be in touch shortly.</p>'">
+            <label>Full Name</label><input required>
+            <label>Phone Number</label><input type="tel" required>
+            <label>Your Travel Dates</label><input placeholder="e.g. Aug 20–23" required>
+            <label>Your Vehicle (make/model/year)</label><textarea rows="3" required></textarea>
+            <button class="btn btn-primary" type="submit" style="width:100%;margin-top:4px">Submit</button>
+          </form>
+        </div>`;
+      document.body.appendChild(overlay);
+    }
+    render(vehicles);
+  </script>
 </body>
 </html>

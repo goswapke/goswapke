@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GoSwap — Lease Vehicles</title>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{--bg:#0b1020;--card:#12193a;--muted:#a9b1d6;--brand:#4b7cff;--brand-2:#7df9ff;--accent:#ffd166}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(8px);
+      background:linear-gradient(180deg,rgba(11,16,32,.9),rgba(11,16,32,.6) 70%,rgba(11,16,32,0));
+      border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand img{width:36px;height:36px;border-radius:9px;object-fit:contain;background:#0e1530}
+    .links{display:flex;gap:18px;align-items:center}
+    .links a{color:#d9def2;font-weight:600;opacity:.92}
+    .links a:hover{opacity:1}
+    .btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;transition:.2s transform,.2s box-shadow}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#06112b;box-shadow:0 10px 28px rgba(77,139,255,.35)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.1);color:#dfe6ff}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 10px;font-size:12px}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+    .card img{width:100%;height:190px;object-fit:cover;background:#0e1530}
+    .card .content{padding:16px}
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:100}
+    .modal{background:#0e1530;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px;max-width:560px;width:92%}
+    .row{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+    @media (max-width:640px){.row{grid-template-columns:1fr}}
+    .hero{position:relative;padding:88px 0 40px;border-bottom:1px solid rgba(255,255,255,.06)}
+    footer{border-top:1px solid rgba(255,255,255,.06);margin-top:40px}
+    .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;padding:28px 0}
+  </style>
+
+</head>
+<body>
+  
+  <header>
+    <div class="container nav">
+      <div class="brand"><img src="assets/logo-goswap.png" alt="GoSwap logo"/><div>GoSwap</div></div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="swap.html">Swap</a>
+        <a href="lease.html">Lease</a>
+        <a href="why-goswap.html">Why GoSwap</a>
+        <a href="how-it-works.html">How it Works</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container hero">
+    <h1>Lease Vehicles</h1>
+    <p class="lead">Verified listings. Airport/SGR delivery. Transparent pricing.</p>
+  </div>
+  <section class="container" style="padding:24px 0 70px">
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 8px">
+      <label><span class="muted" style="display:block;font-size:12px">Location</span>
+        <select id="locationFilter" onchange="applyFilters()">
+          <option value="all">All</option><option value="Nairobi">Nairobi</option><option value="Mombasa">Mombasa</option><option value="Kisumu">Kisumu</option>
+        </select>
+      </label>
+      <label><span class="muted" style="display:block;font-size:12px">Type</span>
+        <select id="typeFilter" onchange="applyFilters()">
+          <option value="all">All</option><option value="SUV">SUV</option><option value="Sedan">Sedan</option><option value="Van">Van</option><option value="Hatchback">Hatchback</option><option value="Wagon">Wagon</option><option value="Pickup">Pickup</option><option value="Bus">Bus</option>
+        </select>
+      </label>
+      <label><span class="muted" style="display:block;font-size:12px">Transmission</span>
+        <select id="transFilter" onchange="applyFilters()">
+          <option value="all">All</option><option value="Automatic">Automatic</option><option value="Manual">Manual</option>
+        </select>
+      </label>
+      <label><span class="muted" style="display:block;font-size:12px">Max Price (Self-drive, KES/day)</span>
+        <input id="maxPrice" type="number" min="0" placeholder="e.g. 6000" oninput="applyFilters()"/>
+      </label>
+      <label><span class="muted" style="display:block;font-size:12px">Sort by</span>
+        <select id="sortBy" onchange="applyFilters()">
+          <option value="relevance">Relevance</option><option value="priceAsc">Price: Low → High</option><option value="priceDesc">Price: High → Low</option>
+        </select>
+      </label>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <div id="count" class="muted">—</div>
+      <button id="resetBtn" class="btn" style="display:none" onclick="resetFilters()">Reset filters</button>
+    </div>
+    <div id="grid" class="grid"></div>
+    <div id="loadMoreWrap" style="text-align:center;margin-top:16px;display:none">
+      <button class="btn" onclick="loadMore()">Load more</button>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2025 GoSwap</div>
+      <div class="muted">partners@goswap.co.ke · +254 715 740 270</div>
+      <div class="social-icons" style="display:flex;gap:14px;align-items:center">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" style="color:#1877F2;font-size:20px"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" style="font-size:20px;background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); -webkit-background-clip:text; background-clip:text; color:transparent;"></i></a>
+        <a href="#" aria-label="X"><i class="fab fa-x-twitter" style="color:#000000;font-size:20px"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp" style="color:#25D366;font-size:20px"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const ALL_VEHICLES = [
+      { id:'rav4', name:'Toyota RAV4', city:'Nairobi', type:'SUV', transmission:'Automatic', seats:5, engine:'2400cc', fuel:'Petrol', price:8000, chauffeurPrice:13000, img:'https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1400&auto=format&fit=crop' },
+      { id:'demio-vitz-note', name:'Mazda Demio / Toyota Vitz / Nissan Note', city:'Nairobi', type:'Hatchback', transmission:'Automatic', seats:5, engine:'1300cc', fuel:'Petrol/Diesel', price:4000, chauffeurPrice:9000, img:'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1400&auto=format&fit=crop' },
+      { id:'axio-corolla', name:'Toyota Axio / Corolla', city:'Nairobi', type:'Sedan', transmission:'Automatic', seats:5, engine:'1500cc', fuel:'Petrol/Hybrid', price:4500, chauffeurPrice:9500, img:'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1400&auto=format&fit=crop' },
+      { id:'fielder', name:'Toyota Fielder', city:'Nairobi', type:'Wagon', transmission:'Automatic', seats:5, engine:'1500cc', fuel:'Petrol/Hybrid', price:4500, chauffeurPrice:9500, img:'https://images.unsplash.com/photo-1549924231-f129b911e442?q=80&w=1400&auto=format&fit=crop' },
+      { id:'cx5', name:'Mazda CX-5', city:'Nairobi', type:'SUV', transmission:'Automatic', seats:5, engine:'2200cc', fuel:'Petrol/Diesel', price:7500, chauffeurPrice:12500, img:'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1400&auto=format&fit=crop' },
+      { id:'xtrail', name:'Nissan X-Trail', city:'Nairobi', type:'SUV', transmission:'Automatic', seats:5, engine:'2000cc', fuel:'Petrol', price:7500, chauffeurPrice:12500, img:'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1400&auto=format&fit=crop' },
+      { id:'voxy-noah', name:'Toyota Voxy / Noah', city:'Nairobi', type:'Van', transmission:'Automatic', seats:7, engine:'2000cc', fuel:'Petrol', price:8000, chauffeurPrice:13000, img:'https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1400&auto=format&fit=crop' },
+      { id:'harrier', name:'Toyota Harrier', city:'Nairobi', type:'SUV', transmission:'Automatic', seats:5, engine:'2000cc', fuel:'Petrol', price:8500, chauffeurPrice:13500, img:'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400&auto=format&fit=crop' },
+      { id:'prado', name:'Toyota Prado', city:'Nairobi', type:'SUV', transmission:'Automatic', seats:5, engine:'2700cc', fuel:'Petrol/Diesel', price:13000, chauffeurPrice:18000, img:'https://images.unsplash.com/photo-1597008633597-74b9f6e264a2?q=80&w=1400&auto=format&fit=crop' },
+      { id:'alphard-vellfire', name:'Toyota Alphard / Vellfire', city:'Nairobi', type:'Van', transmission:'Automatic', seats:7, engine:'2500cc', fuel:'Petrol', price:13000, chauffeurPrice:18000, img:'https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=1400&auto=format&fit=crop' },
+      { id:'v8', name:'Toyota Land Cruiser V8', city:'Nairobi', type:'SUV', transmission:'Automatic', seats:7, engine:'3500cc', fuel:'Petrol', price:26000, chauffeurPrice:31000, img:'https://images.unsplash.com/photo-1549924231-f129b911e442?q=80&w=1400&auto=format&fit=crop' },
+      { id:'coaster', name:'Toyota Coaster (14-seater)', city:'Nairobi', type:'Bus', transmission:'Manual', seats:14, engine:'4000cc', fuel:'Diesel/Petrol', price:20000, chauffeurPrice:25000, img:'https://images.unsplash.com/photo-1502219422320-9ca47798b77f?q=80&w=1400&auto=format&fit=crop' },
+      { id:'hilux', name:'Toyota Hilux', city:'Nairobi', type:'Pickup', transmission:'Automatic', seats:5, engine:'2400cc', fuel:'Diesel', price:10000, chauffeurPrice:15000, img:'https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1400&auto=format&fit=crop' }
+    ];
+    let page=1, pageSize=9;
+    function formatKES(n){return 'KES ' + Number(n).toLocaleString('en-KE');}
+    function imgFallback(e){e.target.src='https://via.placeholder.com/1200x800/0b1020/FFFFFF?text=Vehicle+image';}
+    function currentFilters(){return {loc:locationFilter.value, typ:typeFilter.value, trans:transFilter.value, max:maxPrice.value, sort:sortBy.value};}
+    function filterData(){
+      const {loc,typ,trans,max,sort}=currentFilters();
+      let result = ALL_VEHICLES.filter(v=> (loc==='all'||v.city===loc) && (typ==='all'||v.type===typ) && (trans==='all'||v.transmission===trans) && (!max || v.price<=Number(max)));
+      if(sort==='priceAsc') result=result.sort((a,b)=>a.price-b.price);
+      if(sort==='priceDesc') result=result.sort((a,b)=>b.price-a.price);
+      return result;
+    }
+    function render(list){
+      const grid=document.getElementById('grid');
+      const count=document.getElementById('count');
+      const resetBtn=document.getElementById('resetBtn');
+      const loadBtnWrap=document.getElementById('loadMoreWrap');
+      const total=list.length;
+      count.textContent = `${total} vehicle${total!==1?'s':''}`;
+      const filtersActive = Object.values(currentFilters()).some((v,i)=> i<4 && v && v!=='all');
+      resetBtn.style.display = filtersActive? 'inline-flex':'none';
+      const slice=list.slice(0,page*pageSize);
+      loadBtnWrap.style.display = slice.length<list.length? 'block':'none';
+      if(!slice.length){ grid.innerHTML='<div class="muted" style="background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.16);padding:20px;border-radius:12px;text-align:center">No vehicles match your filters.</div>'; return; }
+      grid.innerHTML=slice.map(c=>`
+        <div class="card">
+          <img src="${c.img}" alt="${c.name}" onerror="imgFallback(event)" loading="lazy">
+          <div class="content">
+            <span class="badge">${c.city} • ${c.type} • ${c.transmission}</span>
+            <h3>${c.name}</h3>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px">
+              <span class="badge" style="opacity:.85">Seats: ${c.seats}</span>
+              <span class="badge" style="opacity:.85">Engine: ${c.engine}</span>
+              <span class="badge" style="opacity:.85">Fuel: ${c.fuel}</span>
+            </div>
+            <p class="muted">Self-drive from <strong>${formatKES(c.price)}/day</strong> · Chauffeured ${formatKES(c.chauffeurPrice)}</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px">
+              <a class="btn" href="#" onclick="openDetails('${c.id}')">Details</a>
+              <a class="btn btn-primary" href="#" onclick="openContact('${c.id}')">Contact to Book</a>
+            </div>
+          </div>
+        </div>`).join('');
+    }
+    function applyFilters(){ page=1; render(filterData()); }
+    function resetFilters(){ locationFilter.value='all'; typeFilter.value='all'; transFilter.value='all'; maxPrice.value=''; sortBy.value='relevance'; applyFilters(); }
+    function loadMore(){ page++; render(filterData()); }
+    function openDetails(id){
+      const v = ALL_VEHICLES.find(x=>x.id===id); if(!v) return;
+      const overlay=document.createElement('div'); overlay.className='overlay';
+      overlay.innerHTML=`
+        <div class="modal">
+          <button class="close" onclick="this.parentElement.parentElement.remove()">×</button>
+          <h3>${v.name}</h3>
+          <p class="muted">${v.city} • ${v.type} • ${v.transmission} • Seats ${v.seats}</p>
+          <p class="muted">Self-drive from <strong>${formatKES(v.price)}/day</strong> · Chauffeured ${formatKES(v.chauffeurPrice)}</p>
+          <button class="btn btn-primary" onclick="this.closest('.modal').querySelector('#contactBtn').click()">Contact to Book</button>
+          <button id="contactBtn" style="display:none" onclick="openContact('${id}')"></button>
+        </div>`;
+      document.body.appendChild(overlay);
+    }
+    function openContact(id){
+      const v = ALL_VEHICLES.find(x=>x.id===id) || {name:'Any listed vehicle'};
+      const overlay=document.createElement('div'); overlay.className='overlay';
+      overlay.innerHTML=`
+        <div class="modal">
+          <button class="close" onclick="this.parentElement.parentElement.remove()">×</button>
+          <h3>Contact to Book</h3>
+          <p class="muted" style="margin-top:-6px"><strong>${v.name}</strong> ${v.city?('• '+v.city):''}</p>
+          <form onsubmit="event.preventDefault();this.outerHTML='<p style=\'color:#a9f1b0\'>Thanks! We\'ve received your request and will contact you.</p>'">
+            <div class="row"><label>Full Name<input required></label><label>Phone Number<input type="tel" required></label></div>
+            <div class="row"><label>Email Address<input type="email" required></label><label>Pickup Location<input required placeholder="e.g. JKIA, SGR Terminus"></label></div>
+            <div class="row"><label>Pickup Date<input type="date" required></label><label>Pickup Time<input type="time" required></label></div>
+            <div class="row"><label>Return Date<input type="date" required></label><label>Travel Destination<input required placeholder="e.g. Diani, Kisumu"></label></div>
+            <label>Notes<textarea rows="3" placeholder="Anything else we should know?"></textarea></label>
+            <button class="btn btn-primary" type="submit" style="width:100%;margin-top:4px">Send</button>
+          </form>
+        </div>`;
+      document.body.appendChild(overlay);
+    }
+    function init(){ render(filterData()); }
+    init();
+  </script>
+</body>
+</html>
